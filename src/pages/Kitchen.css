@@ -1,0 +1,264 @@
+.kitchen-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark);
+}
+
+.kitchen-login-form {
+  background: var(--color-primary);
+  padding: 48px;
+  border-radius: 8px;
+  border: 1px solid rgba(169, 139, 94, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.kitchen-login-form h2 {
+  font-family: var(--font-serif);
+  color: var(--color-light);
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+.kitchen-login-form input {
+  width: 100%;
+  padding: 12px;
+  background: rgba(239, 232, 221, 0.05);
+  border: 1px solid rgba(169, 139, 94, 0.3);
+  border-radius: 4px;
+  color: var(--color-light);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  text-align: center;
+}
+
+.kitchen-login-form button {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.kitchen-dashboard {
+  background-color: var(--color-dark);
+  min-height: 100vh;
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.kitchen-topbar {
+  background-color: var(--color-dark);
+  border-bottom: 1px solid rgba(169, 139, 94, 0.2);
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  flex-shrink: 0;
+}
+
+.kitchen-brand {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+.kitchen-clock {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  color: var(--color-accent);
+}
+
+.kitchen-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.active-badge {
+  background-color: rgba(169, 139, 94, 0.15);
+  color: var(--color-accent);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.btn-kitchen-action {
+  color: rgba(239, 232, 221, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  transition: color 200ms ease;
+}
+
+.btn-kitchen-action:hover {
+  color: var(--color-light);
+}
+
+.kanban-board {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  padding: 24px;
+  gap: 24px;
+}
+
+.kanban-col {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kanban-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(169, 139, 94, 0.15);
+}
+
+.col-count {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 6px;
+  border-radius: 12px;
+  margin-left: auto;
+}
+
+.kanban-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.order-card {
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card.status-pending { border-left: 3px solid #C9A84C; }
+.order-card.status-preparing { border-left: 3px solid #E8883A; }
+.order-card.status-ready { border-left: 3px solid #25D366; }
+.order-card.status-served { 
+  border-left: 3px solid #555555; 
+  opacity: 0.55;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.table-num {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-light);
+}
+
+.time-elapsed {
+  font-size: 12px;
+  color: rgba(239, 232, 221, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.time-elapsed.warning { color: var(--color-accent); }
+.time-elapsed.danger { color: #E05C5C; font-weight: 600; }
+
+.card-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.card-item-line {
+  font-size: 14px;
+  color: rgba(239, 232, 221, 0.80);
+}
+
+.card-note {
+  background-color: rgba(169, 139, 94, 0.10);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-style: italic;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: var(--color-accent);
+}
+
+.card-actions {
+  margin-top: auto;
+}
+
+.btn-status-act {
+  width: 100%;
+  height: 44px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.btn-status-act.pending {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.btn-status-act.preparing {
+  background-color: var(--color-whatsapp);
+  color: var(--color-dark);
+}
+
+.btn-status-act.ready {
+  background-color: rgba(239, 232, 221, 0.10);
+  color: var(--color-light);
+}
+
+.new-card-anim {
+  animation: slideDownFlash 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideDownFlash {
+  0% { transform: translateY(-16px); background-color: rgba(169, 139, 94, 0.25); }
+  100% { transform: translateY(0); background-color: var(--color-primary); }
+}
+
+@media (max-width: 1024px) {
+  .kanban-col {
+    min-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .kanban-col {
+    min-width: 85%;
+  }
+}

@@ -1,0 +1,188 @@
+/* ABOUT HERO */
+.about-hero {
+  display: flex;
+  height: 60vh;
+  background-color: var(--color-primary);
+  margin-top: 72px; /* For desktop nav offset */
+}
+
+.about-hero-content {
+  flex: 1;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-pretitle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.about-title {
+  font-size: 64px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-light);
+  margin-bottom: 24px;
+}
+
+.about-divider {
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-accent);
+  border: none;
+  margin-bottom: 24px;
+}
+
+.about-intro {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-style: italic;
+  color: rgba(239, 232, 221, 0.70);
+}
+
+.about-hero-image-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.about-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* HISTOIRE SECTION */
+.histoire-section {
+  background-color: var(--color-light);
+  display: flex;
+  padding: 120px 48px;
+  gap: 64px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.histoire-content {
+  flex: 1;
+}
+
+.histoire-text {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-dark);
+}
+
+.histoire-image-wrapper {
+  flex: 1;
+}
+
+.histoire-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* VALEURS SECTION */
+.valeurs-section {
+  background-color: var(--color-secondary);
+  padding: 64px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.valeur {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.valeur-separator {
+  width: 1px;
+  height: 40px;
+  background-color: var(--color-accent);
+}
+
+/* PHILOSOPHIE SECTION */
+.philosophie-section {
+  position: relative;
+  background-color: var(--color-primary);
+  background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=1927&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 120px 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.philosophie-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(35, 53, 45, 0.85);
+}
+
+.philosophie-title, .philosophie-text {
+  position: relative;
+  z-index: 1;
+}
+
+.philosophie-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--color-light);
+  margin-bottom: 32px;
+}
+
+.philosophie-text {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: rgba(239, 232, 221, 0.85);
+  max-width: 600px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    height: auto;
+    margin-top: 0;
+  }
+  .about-hero-content {
+    padding: 80px 24px;
+  }
+  .about-hero-image-wrapper {
+    height: 300px;
+  }
+  .histoire-section {
+    flex-direction: column;
+    padding: 80px 24px;
+  }
+  .valeurs-section {
+    flex-direction: column;
+    padding: 64px 24px;
+    gap: 24px;
+  }
+  .valeur-separator {
+    width: 60px;
+    height: 1px;
+  }
+  .philosophie-section {
+    padding: 80px 24px;
+  }
+}

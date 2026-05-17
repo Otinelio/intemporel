@@ -1,0 +1,539 @@
+.reveal {
+  opacity: 0;
+}
+
+.reveal.visible.fade-up {
+  animation: slideUp 600ms ease-out forwards;
+}
+
+.reveal.visible.slide-left {
+  animation: slideLeft 700ms ease-out forwards;
+}
+
+.reveal.visible.slide-right {
+  animation: slideRight 700ms ease-out forwards;
+}
+
+@keyframes slideLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* SECTION 1 - HERO */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 18vh;
+  padding-left: 48px;
+  padding-right: 48px;
+  background-image: url('https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(175deg, rgba(27,36,32,0.15) 0%, rgba(27,36,32,0.65) 60%, rgba(27,36,32,0.92) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+.hero-pretitle {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeIn 600ms ease-out forwards;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-light);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: slideUp 800ms ease-out forwards;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  color: rgba(239, 232, 221, 0.7);
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 600ms ease-out forwards;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  opacity: 0;
+  animation: slideUp 600ms ease-out forwards;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: filter 200ms ease;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 32px;
+  border-radius: 2px;
+  font-size: 14px;
+  transition: background-color 200ms ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(239, 232, 221, 0.12);
+}
+
+.hero-signature {
+  position: absolute;
+  right: 48px;
+  bottom: 18vh;
+  z-index: 2;
+  height: 120px;
+  border-left: 1px solid rgba(169, 139, 94, 0.4);
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 800ms ease-out forwards;
+}
+
+.hero-signature span {
+  writing-mode: vertical-rl;
+  font-family: var(--font-sans);
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 0.1em;
+}
+
+/* SECTION 2 - UNIVERS */
+.univers-section {
+  background-color: var(--color-secondary);
+  padding: 120px 48px;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 64px;
+  align-items: center;
+}
+
+.univers-pretitle {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.univers-title {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.univers-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-dark);
+}
+
+.univers-image-wrapper {
+  padding: 24px;
+}
+
+.univers-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 4px;
+  transform: rotate(1.5deg);
+  box-shadow: 24px 24px 0 0 rgba(35, 53, 45, 0.12);
+  object-fit: cover;
+}
+
+/* SECTION 3 - POINTS FORTS */
+.points-section {
+  background-color: var(--color-primary);
+  padding: 120px 48px;
+}
+
+.points-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.point-card {
+  color: var(--color-light);
+}
+
+.point-icon {
+  color: var(--color-accent);
+  margin-bottom: 24px;
+  width: 32px;
+  height: 32px;
+}
+
+.point-title {
+  font-size: 26px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.point-text {
+  font-size: 14px;
+  color: rgba(239, 232, 221, 0.70);
+  line-height: 1.6;
+}
+
+/* SECTION 4 - TERRASSE & JARDIN */
+.terrasse-section {
+  background-color: var(--color-light);
+  padding: 120px 48px;
+  text-align: center;
+}
+
+.terrasse-title {
+  font-size: 56px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-primary);
+  margin-bottom: 24px;
+}
+
+.terrasse-citation {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-style: italic;
+  color: var(--color-accent);
+  margin-bottom: 64px;
+}
+
+.masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masonry-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  aspect-ratio: 1;
+}
+
+.masonry-item.item-large {
+  grid-column: span 2;
+  grid-row: span 2;
+  aspect-ratio: auto;
+}
+
+/* SECTION 5 - MUSIQUE & MOMENTS */
+.musique-section {
+  position: relative;
+  height: 55vh;
+  background-image: url('https://images.unsplash.com/photo-1543791939-66848d578b8f?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  background-color: var(--color-primary);
+}
+
+.musique-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(27,36,32,0.96) 40%, rgba(27,36,32,0.50) 100%);
+}
+
+.musique-content {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+}
+
+.musique-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.musique-title {
+  font-size: 52px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-light);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.musique-text {
+  font-size: 15px;
+  color: rgba(239, 232, 221, 0.78);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.btn-outline-accent {
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all 200ms ease;
+}
+
+.btn-outline-accent:hover {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+/* SECTION 6 - GALERIE IMMERSIVE */
+.galerie-section {
+  background-color: var(--color-dark);
+  padding: 120px 0;
+  text-align: center;
+}
+
+.galerie-title {
+  font-size: 44px;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-light);
+  margin-bottom: 64px;
+}
+
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.galerie-item {
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.galerie-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease, filter 400ms ease;
+}
+
+.galerie-item:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.08) saturate(1.10) contrast(1.04);
+}
+
+/* SECTION 7 - RÉSERVATION RAPIDE */
+.reservation-section {
+  background-color: var(--color-secondary);
+  padding: 120px 48px;
+  text-align: center;
+}
+
+.reservation-title {
+  font-size: 48px;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 48px;
+}
+
+.reservation-form {
+  display: flex;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto 32px;
+}
+
+.res-input {
+  flex: 1;
+  background-color: var(--color-light);
+  border: 1px solid var(--color-accent);
+  border-radius: 2px;
+  padding: 14px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--color-dark);
+  outline: none;
+}
+
+.btn-submit-res {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 32px;
+  border-radius: 2px;
+  transition: background-color 250ms ease;
+}
+
+.btn-submit-res:hover {
+  background-color: var(--color-dark);
+}
+
+.reservation-whatsapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.btn-whatsapp-res {
+  background-color: var(--color-whatsapp);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SECTION 8 - TÉMOIGNAGES */
+.temoignages-section {
+  background-color: var(--color-primary);
+  padding: 120px 48px;
+}
+
+.temoignages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.temoignage-card {
+  background-color: rgba(239, 232, 221, 0.05);
+  border: 1px solid rgba(169, 139, 94, 0.2);
+  border-radius: 4px;
+  padding: 28px;
+}
+
+.temoignage-text {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--color-light);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.temoignage-author {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: var(--color-accent);
+  margin-bottom: 12px;
+}
+
+.temoignage-stars {
+  display: flex;
+  gap: 4px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .hero-title {
+    font-size: 44px;
+  }
+  .hero-signature {
+    display: none;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+  }
+  .univers-section {
+    grid-template-columns: 1fr;
+    padding: 80px 24px;
+  }
+  .univers-image {
+    transform: none;
+  }
+  .points-section {
+    padding: 80px 24px;
+  }
+  .points-grid {
+    grid-template-columns: 1fr;
+  }
+  .terrasse-section {
+    padding: 80px 24px;
+  }
+  .masonry-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .masonry-item.item-large {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  .musique-section {
+    padding: 80px 24px;
+    height: auto;
+  }
+  .galerie-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .reservation-form {
+    flex-direction: column;
+  }
+  .btn-submit-res {
+    padding: 14px;
+  }
+  .temoignages-grid {
+    grid-template-columns: 1fr;
+  }
+}

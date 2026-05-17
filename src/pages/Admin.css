@@ -1,0 +1,263 @@
+.admin-login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F8F9FA;
+}
+
+.admin-login-form {
+  background: white;
+  padding: 48px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.admin-login-form h2 {
+  font-family: var(--font-serif);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.admin-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 16px;
+}
+
+.admin-btn {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.admin-btn.danger {
+  background-color: #E05C5C;
+}
+
+.admin-dashboard {
+  background-color: #F8F9FA;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  color: #333;
+}
+
+.admin-topbar {
+  background-color: white;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.admin-brand {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+
+.admin-tabs {
+  display: flex;
+  background-color: white;
+  padding: 0 32px;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-tab {
+  padding: 16px 24px;
+  font-weight: 600;
+  color: #666;
+  border-bottom: 2px solid transparent;
+}
+
+.admin-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.admin-content {
+  padding: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.admin-panel {
+  background: white;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.admin-cat-section {
+  margin-bottom: 32px;
+}
+
+.admin-cat-section h4 {
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.admin-item-row, .admin-cat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.admin-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-icon {
+  color: #666;
+}
+
+.btn-icon.danger:hover {
+  color: #E05C5C;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--color-whatsapp);
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.admin-btn-save {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-whatsapp);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 24px;
+}
+
+.cat-order-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.cat-name {
+  flex: 1;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+.admin-help-text {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.admin-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 32px 0;
+}
